@@ -23,8 +23,10 @@ $(document).ready(function() {
     });
 
     $('.pets__pet').on('click', function(){
-        $('.pets').hide();
-        $('.details').show();
+        $('.pets').fadeOut(200);
+        window.setTimeout(function() {
+            $('.details').fadeIn(200);
+        }, 200);
 
         var src = $(this).find('img').attr('src');
         $('.details img').attr('src', src);
@@ -37,12 +39,16 @@ $(document).ready(function() {
     });
 
     $('.back-to-view').on('click', function(){
-        $('.details').hide();
-        $('.pets').show();
+        $('.details').fadeOut(200);
+        window.setTimeout(function() {
+            $('.pets').fadeIn(200);
+        }, 200);
     })
 
     $('.btn-send').on('click', function(){
-        $('.contacts__block-form').hide();
-        $('.contacts__block-sent').show();
+        $('.contacts__block-form').fadeOut(200);
+        window.setTimeout(function() {
+            $('.contacts__block-sent').fadeIn(200);
+        }, 200);
     })
 });
